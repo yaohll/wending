@@ -1,0 +1,728 @@
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expries" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" tupe="text/css" href="" />
+<title>Air Analysis System</title>
+<style type="text/css" href="">
+body
+{
+  font-family: Times, serif;
+  margin: 0px;
+}
+
+.bar1
+{
+  width: 1200px;
+  height: 75px;
+}
+
+.bar2
+{
+  width: 1200px;
+  height: 80px;
+}
+
+.biaoti
+{
+  background-color: #e4e4e4;
+  width: 1200px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 auto;
+}
+
+.upside
+{
+ width: 1200px;
+ height: 40px;
+}
+
+.nav
+{
+ width: 1200px;
+ height: 49px;
+ text-align: center;
+ line-height: 58px;
+}
+
+.biaoqian_D
+{
+ width: 1200px;
+ height: 34px;
+ text-align: left;
+ line-height: 35px;
+}
+
+.city
+{
+ width: 1200px;
+ height: 40px;
+ line-height: 40px;
+ background-color: #e4e4e4;
+ text-align: center;
+}
+
+.mokuai
+{
+ width: 1100px;
+ height:220px;
+ background-color: #f9fafb;
+ text-align: center;
+}
+
+</style>
+</head>
+
+
+
+<body>
+ <center>
+ <div class="bar1"><img src="pic/biao2.png" width="1200px" height="75px" /></div>
+ <div class="biaoti">
+ <h1 style="margin:0 auto 0 auto">AIR-EMISSION-COST Analysis System</h1>
+ </div>
+ <div class="bar2"><img src="pic/biao1.png" width="1200px" height="80px" /></div>
+ <div class="biaoqian_D">
+  <a id="bq_lis" href="emission_list.html" style="text-decoration: none; color: black; font-weight: bold;">始末浓度计算方式</a>
+ </div>
+ <hr style="height: 0px; width: 1200px; border: none; border-top: 2px ridge #666666; margin: 1px 0px 0px 0px;" />
+ <br/>
+ <div class="mokuai">
+  <div style="width: 1100px; height: 50px; background-color: #e4e4e4;text-align: center;line-height:50px;">
+   原始浓度:&nbsp&nbsp&nbsp<input type="text" id="yuanshi" name="yuanshinongdu" size="8">μg/m3&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp削减后浓度:&nbsp&nbsp&nbsp<input type="text" id="xuejian" name="xuejiannongdu" size="8">μg/m3
+  </div>
+  <div style="width: 1100px; height: 170px; background-color: #e4e4e4;">
+   <table border="0" cellspacing="0" width="910px" style="margin-left:95px;">
+    <thead>
+     <tr bgcolor="#0091d7">
+      <th scope="col" height="30px" width="130px"></th>
+      <th scope="col" width="130px">农业</th>
+      <th scope="col" width="130px">民用散煤</th>
+      <th scope="col" width="130px">生物质燃烧</th>
+      <th scope="col" width="130px">施工扬尘</th>
+      <th scope="col" width="130px">道路扬尘</th>
+      <th scope="col" width="130px">VOCs面源</th>
+     </tr>
+    </thead>
+    <tbody align="center" style="color: #434343;">
+     <tr bgcolor="#bcbcbc">
+      <td height="5px"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr bgcolor="#ffffff">
+      <td height="35px">削减比例(%)</td>
+      <td id="11">-</td>
+      <td id="12">-</td>
+      <td id="13">-</td>
+      <td id="14">-</td>
+      <td id="15">-</td>
+      <td id="16">-</td>
+     </tr>
+     <tr bgcolor="#f7f7f7">
+      <td height="35px" style="color:red">总成本（百万）</td>
+      <td></td>
+      <td></td>
+      <td id="zcb" style="color:red">-</td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+    </tbody>
+   </table>
+   <br/>
+   <button onclick="jisuan()" style="width:60px;height:27px;">计算</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick="qingkong()" style="width:60px;height:27px;">清空</button>
+  </div>
+ </div>
+ <div class="biaoqian_D">
+  <a id="bq_lis" href="emission_list.html" style="text-decoration: none; color: black; font-weight: bold;">削减比例计算方式</a>
+ </div>
+ <hr style="height: 0px; width: 1200px; border: none; border-top: 2px ridge #666666; margin: 1px 0px 0px 0px;" />
+ <br/>
+ <div class="mokuai">
+  <div style="width: 1100px; height: 50px; background-color: #e4e4e4;text-align: center;line-height:50px;">
+   削减比例:&nbsp
+   <select id="bili" style="padding: 2px; text-align: center;" onChange="changebili()";>
+    <option value="kong" selected="">-</option>
+    <option value="1">1%</option>
+    <option value="2">2%</option>
+    <option value="3">3%</option>
+    <option value="4">4%</option>
+    <option value="5">5%</option>
+    <option value="6">6%</option>
+    <option value="7">7%</option>
+    <option value="8">8%</option>
+    <option value="9">9%</option>
+    <option value="10">10%</option>
+    <option value="11">11%</option>
+    <option value="12">12%</option>
+    <option value="13">13%</option>
+    <option value="14">14%</option>
+    <option value="15">15%</option>
+    <option value="16">16%</option>
+    <option value="17">17%</option>
+    <option value="18">18%</option>
+    <option value="19">19%</option>
+    <option value="20">20%</option>
+    <option value="21">21%</option>
+   </select>
+  </div>
+  <div style="width: 1100px; height: 170px; background-color: #e4e4e4;">
+   <table border="0" cellspacing="0" width="910px" style="margin-left:95px;">
+    <thead>
+     <tr bgcolor="#0091d7">
+      <th scope="col" height="30px" width="130px"></th>
+      <th scope="col" width="130px">农业</th>
+      <th scope="col" width="130px">民用散煤</th>
+      <th scope="col" width="130px">生物质燃烧</th>
+      <th scope="col" width="130px">施工扬尘</th>
+      <th scope="col" width="130px">道路扬尘</th>
+      <th scope="col" width="130px">VOCs面源</th>
+     </tr>
+    </thead>
+    <tbody align="center" style="color: #434343;">
+     <tr bgcolor="#bcbcbc">
+      <td height="5px"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr bgcolor="#ffffff">
+      <td height="35px">削减比例(%)</td>
+      <td id="21">-</td>
+      <td id="22">-</td>
+      <td id="23">-</td>
+      <td id="24">-</td>
+      <td id="25">-</td>
+      <td id="26">-</td>
+     </tr>
+     <tr bgcolor="#f7f7f7">
+      <td height="35px" style="color:red">总成本（百万）</td>
+      <td></td>
+      <td></td>
+      <td id="zcb2" style="color:red">-</td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+    </tbody>
+   </table>
+   <br/>
+   <button onclick="qingkong2()" style="width:60px;height:27px;">清空</button>
+  </div>
+ </div>
+
+
+</body>
+
+<script type="text/javascript">
+//=点击展开关闭效果=
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+
+function jisuan(){
+   var yuanshinongdu = document.getElementById('yuanshi').value;
+   var xuejiannongdu = document.getElementById('xuejian').value;
+   var x1 = Number(yuanshinongdu);
+   var x2 = Number(xuejiannongdu)
+   if (x1 <= 0 || x2 <= 0)
+      {
+       alert("浓度值必须为正数，请重新输入！");
+      }
+   else if (x1 <= x2)
+      {
+       alert("原始浓度须大于削减后浓度，请重新输入！");
+      }
+   else if ((x1 - x2)/x1 >= 0.215)
+      {
+       alert("您输入的数值已超出可削减范围，请重新输入！");
+      }
+   else if (x2/x1 < 1 && x2/x1 >= 0.985)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="0";
+       document.getElementById('13').innerHTML="27";
+       document.getElementById('14').innerHTML="0";
+       document.getElementById('15').innerHTML="0";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="0.27";
+      }
+   else if (x2/x1 < 0.985 && x2/x1 >= 0.975)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="0";
+       document.getElementById('13').innerHTML="55";
+       document.getElementById('14').innerHTML="0";
+       document.getElementById('15').innerHTML="0";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="0.55";
+      }
+   else if (x2/x1 < 0.975 && x2/x1 >= 0.965)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="0";
+       document.getElementById('13').innerHTML="82";
+       document.getElementById('14').innerHTML="0";
+       document.getElementById('15').innerHTML="0";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="0.82";
+      }
+   else if (x2/x1 < 0.965 && x2/x1 >= 0.955)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="0";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="11";
+       document.getElementById('15').innerHTML="0";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="1.16";
+      }
+   else if (x2/x1 < 0.955 && x2/x1 >= 0.945)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="3";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="3";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="1.58";
+      }
+   else if (x2/x1 < 0.945 && x2/x1 >= 0.935)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="10";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="2.04";
+      }
+   else if (x2/x1 < 0.935 && x2/x1 >= 0.925)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="16";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="2.49";
+      }
+   else if (x2/x1 < 0.925 && x2/x1 >= 0.915)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="22";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="2.95";
+      }
+   else if (x2/x1 < 0.915 && x2/x1 >= 0.905)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="29";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="3.41";
+      }
+   else if (x2/x1 < 0.905 && x2/x1 >= 0.895)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="36";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="3.86";
+      }
+   else if (x2/x1 < 0.895 && x2/x1 >= 0.885)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="42";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="4.32";
+      }
+   else if (x2/x1 < 0.885 && x2/x1 >= 0.875)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="48";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="4.78";
+      }
+   else if (x2/x1 < 0.875 && x2/x1 >= 0.865)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="55";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="5.23";
+      }
+   else if (x2/x1 < 0.865 && x2/x1 >= 0.855)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="61";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="5";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="5.69";
+      }
+   else if (x2/x1 < 0.855 && x2/x1 >= 0.845)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="68";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="6";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="6.15";
+      }
+   else if (x2/x1 < 0.845 && x2/x1 >= 0.835)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="74";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="6";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="6.60";
+      }
+   else if (x2/x1 < 0.835 && x2/x1 >= 0.825)
+      {
+       document.getElementById('11').innerHTML="0";
+       document.getElementById('12').innerHTML="81";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="6";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="7.06";
+      }
+   else if (x2/x1 < 0.825 && x2/x1 >= 0.815)
+      {
+       document.getElementById('11').innerHTML="2";
+       document.getElementById('12').innerHTML="85";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="12";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="7.57";
+      }
+   else if (x2/x1 < 0.815 && x2/x1 >= 0.805)
+      {
+       document.getElementById('11').innerHTML="22";
+       document.getElementById('12').innerHTML="85";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="12";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="8.55";
+      }
+   else if (x2/x1 < 0.805 && x2/x1 >= 0.795)
+      {
+       document.getElementById('11').innerHTML="41";
+       document.getElementById('12').innerHTML="85";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="12";
+       document.getElementById('16').innerHTML="0";
+       document.getElementById('zcb').innerHTML="9.53";
+      }
+   else if (x2/x1 < 0.795 && x2/x1 >= 0.785)
+      {
+       document.getElementById('11').innerHTML="50";
+       document.getElementById('12').innerHTML="85";
+       document.getElementById('13').innerHTML="83";
+       document.getElementById('14').innerHTML="15";
+       document.getElementById('15').innerHTML="12";
+       document.getElementById('16').innerHTML="25";
+       document.getElementById('zcb').innerHTML="12.46";
+      }
+}
+
+  function qingkong(){
+       document.getElementById('11').innerHTML="-";
+       document.getElementById('12').innerHTML="-";
+       document.getElementById('13').innerHTML="-";
+       document.getElementById('14').innerHTML="-";
+       document.getElementById('15').innerHTML="-";
+       document.getElementById('16').innerHTML="-";
+       document.getElementById('zcb').innerHTML="-";
+       document.getElementById('yuanshi').value=null;
+       document.getElementById('xuejian').value=null;
+}
+
+  function changebili(){
+       var bili = document.getElementById('bili');
+      if (bili.value == "1")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="0";
+       document.getElementById('23').innerHTML="27";
+       document.getElementById('24').innerHTML="0";
+       document.getElementById('25').innerHTML="0";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="0.27";
+      }
+      if (bili.value == "2")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="0";
+       document.getElementById('23').innerHTML="55";
+       document.getElementById('24').innerHTML="0";
+       document.getElementById('25').innerHTML="0";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="0.55";
+      }
+      if (bili.value == "3")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="0";
+       document.getElementById('23').innerHTML="82";
+       document.getElementById('24').innerHTML="0";
+       document.getElementById('25').innerHTML="0";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="0.82";
+      }
+      if (bili.value == "4")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="0";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="11";
+       document.getElementById('25').innerHTML="0";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="1.16";
+      }
+      if (bili.value == "5")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="3";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="3";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="1.58";
+      }
+      if (bili.value == "6")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="10";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="2.04";
+      }
+      if (bili.value == "7")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="16";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="2.49";
+      }
+      if (bili.value == "8")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="22";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="2.95";
+      }
+      if (bili.value == "9")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="29";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="3.41";
+      }
+      if (bili.value == "10")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="36";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="3.86";
+      }
+      if (bili.value == "11")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="42";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="4.32";
+      }
+      if (bili.value == "12")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="48";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="4.78";
+      }
+      if (bili.value == "13")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="55";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="5.23";
+      }
+      if (bili.value == "14")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="61";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="5";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="5.69";
+      }
+      if (bili.value == "15")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="68";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="6";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="6.15";
+      }
+      if (bili.value == "16")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="74";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="6";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="6.60";
+      }
+      if (bili.value == "17")
+      {
+       document.getElementById('21').innerHTML="0";
+       document.getElementById('22').innerHTML="81";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="6";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="7.06";
+      }
+      if (bili.value == "18")
+      {
+       document.getElementById('21').innerHTML="2";
+       document.getElementById('22').innerHTML="85";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="12";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="7.57";
+      }
+      if (bili.value == "19")
+      {
+       document.getElementById('21').innerHTML="22";
+       document.getElementById('22').innerHTML="85";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="12";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="8.55";
+      }
+      if (bili.value == "20")
+      {
+       document.getElementById('21').innerHTML="41";
+       document.getElementById('22').innerHTML="85";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="12";
+       document.getElementById('26').innerHTML="0";
+       document.getElementById('zcb2').innerHTML="9.53";
+      }
+      if (bili.value == "21")
+      {
+       document.getElementById('21').innerHTML="50";
+       document.getElementById('22').innerHTML="85";
+       document.getElementById('23').innerHTML="83";
+       document.getElementById('24').innerHTML="15";
+       document.getElementById('25').innerHTML="12";
+       document.getElementById('26').innerHTML="25";
+       document.getElementById('zcb2').innerHTML="12.46";
+      }
+      if (bili.value == "kong")
+      {
+       document.getElementById('21').innerHTML="-";
+       document.getElementById('22').innerHTML="-";
+       document.getElementById('23').innerHTML="-";
+       document.getElementById('24').innerHTML="-";
+       document.getElementById('25').innerHTML="-";
+       document.getElementById('26').innerHTML="-";
+       document.getElementById('zcb2').innerHTML="-";
+      }
+
+}
+    function qingkong2(){
+       
+       document.getElementById('21').innerHTML="-";
+       document.getElementById('22').innerHTML="-";
+       document.getElementById('23').innerHTML="-";
+       document.getElementById('24').innerHTML="-";
+       document.getElementById('25').innerHTML="-";
+       document.getElementById('26').innerHTML="-";
+       document.getElementById('zcb2').innerHTML="-";
+       document.getElementById('bili').value = "kong";
+}
+</script>
+
+</html>

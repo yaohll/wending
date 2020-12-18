@@ -1,0 +1,724 @@
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expries" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" tupe="text/css" href="" />
+<title>Air Analysis System</title>
+<style type="text/css" href="">
+body
+{
+  font-family: Times, serif;
+  margin: 0px;
+}
+
+.bar1
+{
+  width: 1200px;
+  height: 75px;
+}
+
+.bar2
+{
+  width: 1200px;
+  height: 80px;
+}
+
+.biaoti
+{
+  background-color: #e4e4e4;
+  width: 1200px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 auto;
+}
+
+.upside
+{
+ width: 1200px;
+ height: 40px;
+}
+
+.nav
+{
+ width: 1200px;
+ height: 49px;
+ text-align: center;
+ line-height: 58px;
+}
+
+.biaoqian_D
+{
+ width: 1200px;
+ height: 34px;
+ text-align: left;
+ line-height: 35px;
+}
+
+.city
+{
+ width: 1200px;
+ height: 40px;
+ line-height: 40px;
+ background-color: #e4e4e4;
+ text-align: center;
+}
+
+.table
+{
+ width: 1200px;
+ background-color: white;
+ text-align: center;
+}
+
+</style>
+</head>
+
+
+
+<body>
+ <center>
+ <div class="bar1"><img src="pic/biao2.png" width="1200px" height="75px" /></div>
+ <div class="biaoti">
+ <h1 style="margin:0 auto 0 auto">AIR-EMISSION-COST Analysis System</h1>
+ </div>
+ <div class="bar2"><img src="pic/biao1.png" width="1200px" height="80px" /></div>
+ <div class="biaoqian_D">
+  <a id="bq_lis" href="emission_list.html" style="text-decoration: none; color: black; font-weight: bold;">查询详情</a>
+ </div>
+ <hr style="height: 0px; width: 1200px; border: none; border-top: 2px ridge #666666; margin: 1px 0px 0px 0px;" />
+ <div class="table">
+  <table border="0" cellspacing="0" width="1200px">
+   <thead>
+    <tr bgcolor="#0091d7">
+     <th scope="col" rowspan="2" height="30px" width="100px">面源ID</th>
+     <th scope="col" rowspan="2" width="115px">污染源</th>
+     <th scope="col" rowspan="2" width="130px">控制措施</th>
+     <th scope="col" colspan="9" bgcolor="#66ccff">减排比例（%）</th>
+    </tr>
+    <tr bgcolor="#0091d7">
+     <th width="95px" height="30px">SO2</th>
+     <th width="95px">NOx</th>
+     <th width="95px">CO</th>
+     <th width="95px">PM10</th>
+     <th width="95px">PM2.5</th>
+     <th width="95px">VOCs</th>
+     <th width="95px">NH3</th>
+     <th width="95px">BC</th>
+     <th width="95px">OC</th>
+    </tr>
+   </thead>
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#bcbcbc">
+     <td height="5px"></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+    <tr bgcolor="#ffcc00">
+     <td height="45px"><a href="#" onclick="openShutManager(this,'box1',false,'农业源标准','农业源标准')">农业源标准</a></td>
+     <td>-</td>
+     <td>-</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>50</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box1" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">农业源</td>
+     <td width="130px">种植业治理</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">8</td>
+     <td width="95px">48</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>农业源</td>
+     <td>养殖业治理</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>52</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#66ff66">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box2',false,'民用燃煤标准','民用燃煤标准')">民用燃煤标准</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">68.1</td>
+     <td width="95px">80.7</td>
+     <td width="95px">74.3</td>
+     <td width="95px">98.7</td>
+     <td width="95px">99.9</td>
+     <td width="95px">87.6</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box2" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">民用散煤</td>
+     <td width="130px">替代使用无烟煤</td>
+     <td width="95px">32.4</td>
+     <td width="95px">31.3</td>
+     <td width="95px">50.1</td>
+     <td width="95px">83.7</td>
+     <td width="95px">87.0</td>
+     <td width="95px">55.0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>民用散煤</td>
+     <td>替代使用蜂窝煤</td>
+     <td>8.1</td>
+     <td>50.0</td>
+     <td>48.0</td>
+     <td>91.9</td>
+     <td>92.6</td>
+     <td>72.5</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>民用散煤</td>
+     <td>替代使用民用兰炭</td>
+     <td>48.6</td>
+     <td>43.8</td>
+     <td>1.0</td>
+     <td>0</td>
+     <td>89.8</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#cc66ff">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box3',false,'生物质燃烧源标准','生物质燃烧源标准')">生物质燃烧源标准</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">89.09</td>
+     <td width="95px">58.48</td>
+     <td width="95px">67.93</td>
+     <td width="95px">83.64</td>
+     <td width="95px">83.87</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">84.31</td>
+     <td width="95px">92.13</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box3" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">生物质燃烧源</td>
+     <td width="130px">减小焚烧比例</td>
+     <td width="95px">69.0</td>
+     <td width="95px">54.0</td>
+     <td width="95px">56.0</td>
+     <td width="95px">59.0</td>
+     <td width="95px">59.0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">59.0</td>
+     <td width="95px">59.0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>生物质燃烧源</td>
+     <td>改变堆放方式</td>
+     <td>49.0</td>
+     <td>9.0</td>
+     <td>0.16</td>
+     <td>30.0</td>
+     <td>31.0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>42.0</td>
+     <td>60.0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>生物质燃烧源</td>
+     <td>减小秸秆含水率</td>
+     <td>31.0</td>
+     <td>0.82</td>
+     <td>27.0</td>
+     <td>43.0</td>
+     <td>43.0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>34.0</td>
+     <td>52.0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffff00">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box4',false,'施工扬尘控制标准','施工扬尘控制标准')">施工扬尘控制标准</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">34.0</td>
+     <td width="95px">15.3</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box4" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">施工扬尘源</td>
+     <td width="130px">路面铺装混凝土和洒水</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">12.0</td>
+     <td width="95px">5.3</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>施工扬尘源</td>
+     <td>覆盖防尘网</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>3.0</td>
+     <td>1.4</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>施工扬尘源</td>
+     <td>覆盖防尘布</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>4.1</td>
+     <td>1.8</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>施工扬尘源</td>
+     <td>设置围挡</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>2.3</td>
+     <td>1.1</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>施工扬尘源</td>
+     <td>喷洒化学抑制剂</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>12.6</td>
+     <td>5.7</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ff0066">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box5',false,'道路扬尘控制标准','道路扬尘控制标准')">道路扬尘控制标准</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">19.5</td>
+     <td width="95px">12.7</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+    </tr>
+   </tbody>
+  </table>
+ <table id="box5" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">道路扬尘源</td>
+     <td width="130px">道路清扫</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">5.0</td>
+     <td width="95px">3.5</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+     <td width="95px">0</td>
+    </tr> 
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>道路扬尘源</td>
+     <td>道路清扫加水洗</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>6.1</td>
+     <td>4.3</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+    <tr bgcolor="#fffff">
+     <td height="25px">-</td>
+     <td>道路扬尘源</td>
+     <td>喷洒抑制剂</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>8.4</td>
+     <td>4.9</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#99cccc">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box6',false,'VOCs控制标准','VOCs控制标准')">VOCs控制标准</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+    </tr>
+   </tbody>
+  </table>
+ <table id="box6" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">汽修喷涂</td>
+     <td width="130px">活性炭吸附</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">80.0</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+     <td width="95px">-</td>
+    </tr> 
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>汽修喷涂</td>
+     <td>吸收液吸收</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>80.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>汽修喷涂</td>
+     <td>热力燃烧</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>80.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>汽修喷涂</td>
+     <td>催化燃烧</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>85.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>汽修喷涂</td>
+     <td>生物降解</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>70.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>汽修喷涂</td>
+     <td>低温等离子体</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>70.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>汽修喷涂</td>
+     <td>光催化氧化</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>70.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>汽修喷涂</td>
+     <td>沸石转轮浓缩+焚烧</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>78.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>固定源-餐饮源</td>
+     <td>活性炭吸附</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>90.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>固定源-餐饮源</td>
+     <td>低温等离子技术</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>50.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>固定源-餐饮源</td>
+     <td>光催化氧化技术</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>50.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>固定源-餐饮源</td>
+     <td>活性炭吸附脱附催化燃烧技术</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>95.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>固定源-餐饮源</td>
+     <td>撞击流式油烟净化技术</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>90.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+<tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>加油站</td>
+     <td>进一步提高油气回收系统运行效率</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>85.0</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#0091d7">
+     <td height="5px"></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+   </tbody>
+  </table>
+  <p style="font-size: 22px;">点击标准名称可“展开/收缩”具体详情</p>
+ </div>
+
+
+</body>
+
+<script type="text/javascript">
+//=点击展开关闭效果=
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+
+</html>

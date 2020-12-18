@@ -1,0 +1,596 @@
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expries" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" tupe="text/css" href="" />
+<title>Air Analysis System</title>
+<style type="text/css" href="">
+body
+{
+  font-family: Times, serif;
+  margin: 0px;
+}
+
+.bar1
+{
+  width: 1200px;
+  height: 75px;
+}
+
+.bar2
+{
+  width: 1200px;
+  height: 80px;
+}
+
+.biaoti
+{
+  background-color: #e4e4e4;
+  width: 1200px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 auto;
+}
+
+.upside
+{
+ width: 1200px;
+ height: 40px;
+}
+
+.nav
+{
+ width: 1200px;
+ height: 49px;
+ text-align: center;
+ line-height: 58px;
+}
+
+.biaoqian_D
+{
+ width: 1200px;
+ height: 34px;
+ text-align: left;
+ line-height: 35px;
+}
+
+.city
+{
+ width: 1200px;
+ height: 40px;
+ line-height: 40px;
+ background-color: #e4e4e4;
+ text-align: center;
+}
+
+.table
+{
+ width: 1200px;
+ background-color: white;
+ text-align: center;
+}
+
+</style>
+</head>
+
+
+
+<body>
+ <center>
+ <div class="bar1"><img src="pic/biao2.png" width="1200px" height="75px" /></div>
+ <div class="biaoti">
+ <h1 style="margin:0 auto 0 auto">AIR-EMISSION-COST Analysis System</h1>
+ </div>
+ <div class="bar2"><img src="pic/biao1.png" width="1200px" height="80px" /></div>
+ <div class="biaoqian_D">
+  <a id="bq_lis" href="emission_list.html" style="text-decoration: none; color: black; font-weight: bold;">查询详情</a>
+ </div>
+ <hr style="height: 0px; width: 1200px; border: none; border-top: 2px ridge #666666; margin: 1px 0px 0px 0px;" />
+ <div class="table">
+  <table border="0" cellspacing="0" width="1200px">
+   <thead>
+    <tr bgcolor="#0091d7">
+     <th scope="col" rowspan="2" height="30px" width="100px">标准名称</th>
+     <th scope="col" rowspan="2" width="115px">污染源</th>
+     <th scope="col" rowspan="2" width="130px">控制措施</th>
+     <th scope="col" colspan="9" bgcolor="#66ccff">减排比例（%）</th>
+    </tr>
+    <tr bgcolor="#0091d7">
+     <th width="95px" height="30px">CO2</th>
+     <th width="95px">NOx</th>
+     <th width="95px">CO</th>
+     <th width="95px">PM10</th>
+     <th width="95px">PM2.5</th>
+     <th width="95px">VOC</th>
+     <th width="95px">NH3</th>
+     <th width="95px">BC</th>
+     <th width="95px">OC</th>
+    </tr>
+   </thead>
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#bcbcbc">
+     <td height="5px"></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+    <tr bgcolor="#ffcc00">
+     <td height="45px"><a href="#" onclick="openShutManager(this,'box1',false,'标准1','标准1')">标准1</a></td>
+     <td>-</td>
+     <td>-</td>
+     <td>17.5</td>
+     <td>41.5</td>
+     <td>41.5</td>
+     <td>36.3</td>
+     <td>36.3</td>
+     <td>25.6</td>
+     <td>41.5</td>
+     <td>36.3</td>
+     <td>36.3</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box1" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">全部源</td>
+     <td width="130px">措施1</td>
+     <td width="95px">1.9</td>
+     <td width="95px">4.6</td>
+     <td width="95px">4.6</td>
+     <td width="95px">4.0</td>
+     <td width="95px">4.0</td>
+     <td width="95px">2.8</td>
+     <td width="95px">4.6</td>
+     <td width="95px">4.0</td>
+     <td width="95px">4.0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施2</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>0.0</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施3</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>1.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施4</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>11.5</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施5</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>13.9</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施6</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>1.1</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施7</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>11.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施8</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>0.0</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施9</td>
+     <td>1.9</td>
+     <td>4.6</td>
+     <td>0.0</td>
+     <td>4.0</td>
+     <td>4.0</td>
+     <td>2.8</td>
+     <td>4.6</td>
+     <td>4.0</td>
+     <td>4.0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#66ff66">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box2',false,'标准2','标准2')">标准2</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">15.8</td>
+     <td width="95px">29.7</td>
+     <td width="95px">29.7</td>
+     <td width="95px">29.5</td>
+     <td width="95px">29.5</td>
+     <td width="95px">17.5</td>
+     <td width="95px">29.7</td>
+     <td width="95px">29.5</td>
+     <td width="95px">29.5</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box2" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">全部源</td>
+     <td width="130px">措施1</td>
+     <td width="95px">2.6</td>
+     <td width="95px">5.0</td>
+     <td width="95px">5.0</td>
+     <td width="95px">4.9</td>
+     <td width="95px">4.9</td>
+     <td width="95px">2.9</td>
+     <td width="95px">5.0</td>
+     <td width="95px">4.9</td>
+     <td width="95px">4.9</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施2</td>
+     <td>2.6</td>
+     <td>5.0</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+     <td>2.9</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施3</td>
+     <td>2.6</td>
+     <td>5.0</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+     <td>2.9</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施4</td>
+     <td>2.6</td>
+     <td>5.0</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+     <td>2.9</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施5</td>
+     <td>2.6</td>
+     <td>5.0</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+     <td>2.9</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施6</td>
+     <td>2.6</td>
+     <td>5.0</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+     <td>2.9</td>
+     <td>5.0</td>
+     <td>4.9</td>
+     <td>4.9</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#cc66ff">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box3',false,'标准3','标准3')">标准3</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">15.1</td>
+     <td width="95px">20.9</td>
+     <td width="95px">20.9</td>
+     <td width="95px">21.7</td>
+     <td width="95px">21.7</td>
+     <td width="95px">14.5</td>
+     <td width="95px">20.9</td>
+     <td width="95px">21.7</td>
+     <td width="95px">21.7</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box3" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">全部源</td>
+     <td width="130px">措施1</td>
+     <td width="95px">2.5</td>
+     <td width="95px">3.5</td>
+     <td width="95px">3.5</td>
+     <td width="95px">3.6</td>
+     <td width="95px">3.6</td>
+     <td width="95px">2.4</td>
+     <td width="95px">3.5</td>
+     <td width="95px">3.6</td>
+     <td width="95px">3.6</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施2</td>
+     <td>2.5</td>
+     <td>3.5</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+     <td>2.4</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施3</td>
+     <td>2.5</td>
+     <td>3.5</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+     <td>2.4</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施4</td>
+     <td>2.5</td>
+     <td>3.5</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+     <td>2.4</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施5</td>
+     <td>2.5</td>
+     <td>3.5</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+     <td>2.4</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施6</td>
+     <td>2.5</td>
+     <td>3.5</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+     <td>2.4</td>
+     <td>3.5</td>
+     <td>3.6</td>
+     <td>3.6</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffff00">
+     <td width="100px" height="45px"><a href="#" onclick="openShutManager(this,'box4',false,'标准4','标准4')">标准4</a></td>
+     <td width="115px">-</td>
+     <td width="130px">-</td>
+     <td width="95px">14.5</td>
+     <td width="95px">16.4</td>
+     <td width="95px">16.4</td>
+     <td width="95px">17.0</td>
+     <td width="95px">17.0</td>
+     <td width="95px">6.0</td>
+     <td width="95px">16.4</td>
+     <td width="95px">17.0</td>
+     <td width="95px">17.0</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="box4" border="0" cellspacing="0" width="1200px" style="display: none; font-size: 13px;">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#ffffff">
+     <td width="100px" height="25px">-</td>
+     <td width="115px">全部源</td>
+     <td width="130px">措施1</td>
+     <td width="95px">4.8</td>
+     <td width="95px">5.5</td>
+     <td width="95px">5.5</td>
+     <td width="95px">5.7</td>
+     <td width="95px">5.7</td>
+     <td width="95px">2.0</td>
+     <td width="95px">5.5</td>
+     <td width="95px">5.7</td>
+     <td width="95px">5.7</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施2</td>
+     <td>4.8</td>
+     <td>5.5</td>
+     <td>5.5</td>
+     <td>5.7</td>
+     <td>5.7</td>
+     <td>2.0</td>
+     <td>5.5</td>
+     <td>5.7</td>
+     <td>5.7</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="25px">-</td>
+     <td>全部源</td>
+     <td>措施3</td>
+     <td>4.8</td>
+     <td>5.5</td>
+     <td>5.5</td>
+     <td>5.7</td>
+     <td>5.7</td>
+     <td>2.0</td>
+     <td>5.5</td>
+     <td>5.7</td>
+     <td>5.7</td>
+    </tr>
+   </tbody>
+  </table>
+  <table border="0" cellspacing="0" width="1200px">
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#0091d7">
+     <td height="5px"></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+   </tbody>
+  </table>
+  <p style="font-size: 22px;">点击标准名称可“展开/收缩”具体详情</p>
+ </div>
+
+
+</body>
+
+<script type="text/javascript">
+//=点击展开关闭效果=
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip  &&  shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+
+</html>

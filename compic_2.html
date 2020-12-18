@@ -1,0 +1,254 @@
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expries" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" tupe="text/css" href="" />
+<title>Air Analysis System</title>
+<style type="text/css" href="">
+body
+{
+  font-family: Times, serif;
+  margin: 0px;
+}
+
+.bar1
+{
+  width: 1200px;
+  height: 75px;
+}
+
+.bar2
+{
+  width: 1200px;
+  height: 80px;
+}
+
+.biaoti
+{
+  background-color: #e4e4e4;
+  width: 1200px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 auto;
+}
+
+.upside
+{
+ width: 1200px;
+ height: 40px;
+}
+
+.nav
+{
+ width: 1200px;
+ height: 49px;
+ text-align: center;
+ line-height: 58px;
+}
+
+.biaoqian_D
+{
+ width: 1200px;
+ height: 34px;
+ text-align: left;
+ line-height: 35px;
+}
+
+.choice
+{
+ width: 1200px;
+ height: 40px;
+ line-height: 40px;
+ background-color: #e4e4e4;
+ text-align: center;
+}
+
+.main
+{
+ width: 1200px;
+ background-color:black;
+}
+
+.left
+{
+ width: 400px;
+ background-color: red;
+ float: left;
+}
+
+.middle
+{
+ width: 400px;
+ background-color: red;
+ float: left;
+}
+
+.right
+{
+ width: 400px;
+ background-color: green;
+ float: right;
+}
+
+.bottle_left
+{
+ width: 400px;
+ background-color: #e4e4e4;
+ float: left;
+}
+
+.bottle_middle
+{
+ width: 400px;
+ background-color: #e4e4e4;
+ float: left;
+}
+
+.bottle_right
+{
+ width: 400px;
+ background-color: #e4e4e4;
+ float: left;
+}
+
+
+</style>
+</head>
+
+
+
+<body>
+ <center>
+ <div class="bar1"><img src="pic/biao2.png" width="1200px" height="75px" /></div>
+ <div class="biaoti">
+ <h1 style="margin:0 auto 0 auto">AIR-EMISSION-COST Analysis System</h1>
+ </div>
+ <div class="bar2"><img src="pic/biao1.png" width="1200px" height="80px" /></div>
+ <div class="biaoqian_D">
+  <a id="bq_lis" href="emission_list.html" style="text-decoration: none; color: black; font-weight: bold;">方案比较</a>
+ </div>
+ <hr style="height: 0px; width: 1200px; border: none; border-top: 2px ridge #666666; margin: 1px 0px 0px 0px;" />
+ <div class="choice">
+  <select id="choice1" style="padding: 2px; text-align: center;" onChange="changechoice1();">
+     <option value="PM25" selected="">&nbsp&nbsp&nbsp&nbsp&nbsp PM25 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="PM10">&nbsp&nbsp&nbsp&nbsp&nbsp PM10 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="O3">&nbsp&nbsp&nbsp&nbsp&nbsp O3 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="SO2">&nbsp&nbsp&nbsp&nbsp&nbsp SO2 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="NO2">&nbsp&nbsp&nbsp&nbsp&nbsp NO2 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="CO">&nbsp&nbsp&nbsp&nbsp&nbsp CO &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+  </select>
+  <select id="choice2" style="padding: 2px; text-align: center;" onChange="changechoice2();">
+     <option value="02" selected="">&nbsp&nbsp&nbsp&nbsp&nbsp 民用燃煤标准 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="03">&nbsp&nbsp&nbsp&nbsp&nbsp 生物质燃烧标准 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="04">&nbsp&nbsp&nbsp&nbsp&nbsp 施工扬尘控制标准 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="05">&nbsp&nbsp&nbsp&nbsp&nbsp 道路扬尘控制标准 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="06">&nbsp&nbsp&nbsp&nbsp&nbsp VOCs控制标准 &nbsp&nbsp&nbsp&nbsp&nbsp</option>
+  </select>
+ </div>
+ <div class="main">
+  <div class="left">
+   <img id="left" src="pic/orig_conc/month/PM25/PM25_2.png" width="400px">
+  </div>
+  <div class="left">
+   <img id="middle" src="pic/redu_conc/month/02/PM25/PM25_2.png" width="400px">
+  </div>
+  <div class="right">
+   <img id="right" src="pic/change_conc/month/02/PM25/PM25_2.png" width="400px">
+  </div>
+  <div class="bottle_left">
+   <h3 style="text-align: center">Original</h3>
+  </div>
+  <div class="bottle_middle">
+   <h3 style="text-align: center">Reduce</h3>
+  </div>
+  <div class="bottle_right">
+   <h3 style="text-align: center">Change</h3>
+  </div>
+ <div>
+
+</body>
+
+<script type="text/javascript">
+ function changechoice1(){
+       var choice1 = document.getElementById('choice1');
+       var choice2 = document.getElementById('choice2');
+       if (choice1.value == "PM25"){
+           var path1 = "pic/orig_conc/month/" + choice1.value + "/PM25_2.png";
+           var path2 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/PM25_2.png";
+           var path3 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/PM25_2.png";
+           document.getElementById('left').src = path1;
+           document.getElementById('middle').src = path2;
+           document.getElementById('right').src = path3;}
+       if (choice1.value == "PM10"){
+           var path1 = "pic/orig_conc/month/" + choice1.value + "/PM10_2.png";
+           var path2 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/PM10_2.png";
+           var path3 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/PM10_2.png";
+           document.getElementById('left').src = path1;
+           document.getElementById('middle').src = path2;
+           document.getElementById('right').src = path3;}
+       if (choice1.value == "O3"){
+           var path1 = "pic/orig_conc/month/" + choice1.value + "/O3_2.png";
+           var path2 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/O3_2.png";
+           var path3 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/O3_2.png";
+           document.getElementById('left').src = path1;
+           document.getElementById('middle').src = path2;
+           document.getElementById('right').src = path3;}
+       if (choice1.value == "SO2"){
+           var path1 = "pic/orig_conc/month/" + choice1.value + "/SO2_2.png";
+           var path2 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/SO2_2.png";
+           var path3 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/SO2_2.png";
+           document.getElementById('left').src = path1;
+           document.getElementById('middle').src = path2;
+           document.getElementById('right').src = path3;}
+       if (choice1.value == "NO2"){
+           var path1 = "pic/orig_conc/month/" + choice1.value + "/NO2_2.png";
+           var path2 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/NO2_2.png";
+           var path3 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/NO2_2.png";
+           document.getElementById('left').src = path1;
+           document.getElementById('middle').src = path2;
+           document.getElementById('right').src = path3;}
+       if (choice1.value == "CO"){
+           var path1 = "pic/orig_conc/month/" + choice1.value + "/CO_2.png";
+           var path2 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/CO_2.png";
+           var path3 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/CO_2.png";
+           document.getElementById('left').src = path1;
+           document.getElementById('middle').src = path2;
+           document.getElementById('right').src = path3;}
+ }
+
+ function changechoice2(){
+       var choice1 = document.getElementById('choice1');
+       var choice2 = document.getElementById('choice2');
+       if (choice2.value == "02"){
+           var path3 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           var path4 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           document.getElementById('middle').src = path3;
+           document.getElementById('right').src = path4;}
+       if (choice2.value == "03"){
+           var path3 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           var path4 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           document.getElementById('middle').src = path3;
+           document.getElementById('right').src = path4;}
+       if (choice2.value == "04"){
+           var path3 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           var path4 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           document.getElementById('middle').src = path3;
+           document.getElementById('right').src = path4;}
+       if (choice2.value == "05"){
+           var path3 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           var path4 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           document.getElementById('middle').src = path3;
+           document.getElementById('right').src = path4;}
+       if (choice2.value == "06"){
+           var path3 = "pic/redu_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           var path4 = "pic/change_conc/month/" + choice2.value + "/" + choice1.value + "/" + choice1.value + "_2.png";
+           document.getElementById('middle').src = path3;
+           document.getElementById('right').src = path4;}
+ }
+
+</script>
+
+</html>

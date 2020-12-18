@@ -1,0 +1,575 @@
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expries" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" tupe="text/css" href="" />
+<title>Air Analysis System</title>
+<style type="text/css" href="">
+body
+{
+  font-family: Times, serif;
+  margin: 0px;
+}
+
+.bar1
+{
+  width: 1200px;
+  height: 75px;
+}
+
+.bar2
+{
+  width: 1200px;
+  height: 80px;
+}
+
+.biaoti
+{
+  background-color: #e4e4e4;
+  width: 1200px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 auto;
+}
+
+.upside
+{
+ width: 1200px;
+ height: 40px;
+}
+
+.nav
+{
+ width: 1200px;
+ height: 49px;
+ text-align: center;
+ line-height: 58px;
+} 
+
+.biaoqian_A
+{
+ width: 110px;
+ height: 40px;
+ line-height: 40px;
+ text-align: center;
+ float: left;
+}
+
+.biaoqian_B
+{
+ width: 110px;
+ height: 40px;
+ line-height: 40px;
+ text-align: center;
+ float: left;
+}
+
+div#triangle1
+{
+ height: 0;
+ width: 0;
+ background-color: transparent;
+ border-bottom: 40px solid transparent;
+ border-left: 40px solid #003a68;
+ float: left;
+}
+
+.sj
+{
+ width: 150px;
+ height: 40px;
+ text-align: center;
+ float: left;
+ line-height: 40px;
+}
+
+div#triangle2
+{
+ height: 0;
+ width: 0;
+ background-color: transparent;
+ border-top: 40px solid transparent;
+ border-right: 40px solid #e4e4e4;
+ float: left;
+}
+
+.biaoqian_C
+{
+ width: 750px;
+ height: 40px;
+ line-height: 40px;
+ background-color: #e4e4e4;
+ float: left;
+}
+
+.biaoqian_D
+{ 
+ width: 1200px;
+ height: 34px;
+ text-align: left;
+ line-height: 35px;
+}
+
+ul
+{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+}
+
+li
+{
+ float: left;
+}
+
+a#bq_c:link,a#bq_c:visited
+{
+ display: block;
+ width: 125px;
+ color: #666666;
+ background-color: #e4e4e4;
+ text-align:center;
+ text-decoration: none;
+}
+
+a#bq_c:hover,a#bq_c:active
+{
+ background-color: #666666;
+ color: #FFFFFF;
+}
+
+a#bq_lis:hover
+{
+ display: block;
+ width:122px;
+ color: black;
+ background-color: #e4e4e4;
+ float: left;
+ font-weight: bold;
+}
+
+.city
+{
+ width: 1200px;
+ height: 40px;
+ line-height: 40px;
+ background-color: #e4e4e4;
+ text-align: center;
+}
+
+.table
+{
+ width: 1200px;
+ height:355px;
+ background-color: black;
+ text-align: center;
+}
+
+.footer1
+{
+ width: 1200px;
+ height: 137px;
+ background-color: #e4e4e4;
+}
+
+.footer1_left
+{
+ width: 530px;
+ height: 50px;
+ float: left;
+}
+
+.footer1_mid
+{
+ width: 140px;
+ height: 50px;
+ float: left;
+}
+
+.footer1_right
+{
+ width: 530px;
+ height: 50px;
+ float: left;
+}
+
+.footer1_main
+{
+ width: 1200px;
+ height: 37px;
+ float: left;
+}
+
+.footer2
+{
+ width: 1200px;
+ height: 20px;
+ background-color: #666666;
+ padding: 40px 0 40px 0;
+ text-align: center;
+ line-height: 22px;
+ color: black;
+}
+
+</style>
+</head>
+
+<body>
+ <center>
+ <div class="bar1"><img src="pic/biao2.png" width="1200px" height="75px" /></div>
+ <div class="biaoti">
+ <h1 style="margin:0 auto 0 auto">AIR-EMISSION-COST Analysis System</h1>
+ </div>
+ <div class="bar2"><img src="pic/biao1.png" width="1200px" height="80px" /></div>
+
+ <div class="upside">
+  <br />
+  <a>Sign out</a>
+ </div> 
+ <div class="nav">
+  <hr style="height: 0px; width: 1200px; border: none; border-top: 7px ridge #666666; margin: 0px 0px 2px 0px;" />
+  <div class="biaoqian_A">
+  <a href="index.html" style="display: block; background-color: #e4e4e4; text-decoration: none; color: #003a68; font-weight: bold; text-transform: uppercase;">quality</a>
+  </div>
+  <div class="biaoqian_B">
+  <a href="emission_scheme.html" style="display: block; background-color: #003a68; text-decoration: none; color: #FFFFFF; font-weight: bold; text-transform: uppercase;">emission</a>
+  </div>
+  <div id="triangle1"></div>
+  <div class="sj">
+   <script language="javascript">
+     var week, day, month, year
+     function initArray() {
+                    this.length = initArray.arguments.length
+                    for (var i = 0; i < this.length; i++)
+                        this[i + 1] = initArray.arguments[i]
+                }
+     var LastModDate = new Date();
+     var WeekArray = new initArray("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+     var MonthArray = new initArray("Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec.");
+     day = LastModDate.getDate();
+     var fday = LastModDate.getDate();
+     year = LastModDate.getFullYear();
+     var fyear = LastModDate.getFullYear();
+     var fmonth = LastModDate.getMonth() + 1;
+     week = WeekArray[(LastModDate.getDay() + 1)];
+     month = MonthArray[(LastModDate.getMonth() + 1)];
+     now = new Date();
+     time = now.toLocaleTimeString();
+     document.write(week, " , ", day, " ", month);
+   </script>
+  </div>
+  <div id="triangle2"></div>
+  <div class="biaoqian_C">
+   <ul>
+    <li><a id="bq_c" href="emission_scheme.html">SCHEME</a></li>
+    <li><a id="bq_c" href="emission_list.html">EMISSION LIST</a></li>
+   </ul>
+  </div>
+ </div>
+ <hr style="height: 0px; width: 1200px; border: none; border-top: 7px ridge #666666; margin: 2px 0px 0px 0px;" />
+ </br>
+ <div class="biaoqian_D">
+  <a id="bq_lis" href="emission_list.html" style="text-decoration: none; color: black; font-weight: bold;">EMISSION LIST</a> 
+ </div>
+ <hr style="height: 0px; width: 1200px; border: none; border-top: 2px ridge #666666; margin: 1px 0px 0px 0px;" />
+ <div class="city">
+  <h style="color: black; font-weight: bold; margin-left: 15px; line-height: 40px; float: center;">地区 :&nbsp</h>
+  <select id="region" style="padding: 2px; text-align: center;" onChange="changelist();">
+     <option value="beijing">&nbsp&nbsp&nbsp&nbsp&nbsp北京&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="hebei" selected="">&nbsp&nbsp&nbsp&nbsp&nbsp河北&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+     <option value="tianjin">&nbsp&nbsp&nbsp&nbsp&nbsp天津&nbsp&nbsp&nbsp&nbsp&nbsp</option>
+  </select>
+ </div>
+ <div class="table">
+  <table border="0" cellspacing="0" width="1200px">
+   <thead>
+    <tr bgcolor="#0091d7">
+     <th scope="col" height="30px" width="160px"></th>
+     <th scope="col" width="130px"><a href="pic/list/SO2.png" target="_blank" style="color: yellow; text-decoration: none;">SO2</a></th>
+     <th scope="col" width="130px"><a href="pic/list/NOx.png" target="_blank" style="color: yellow; text-decoration: none;">NOx</a></th>
+     <th scope="col" width="130px"><a href="#" style="color: yellow; text-decoration: none;">VOC</a></th>
+     <th scope="col" width="130px"><a href="pic/list/NH3.png" target="_blank"  style="color: yellow; text-decoration: none;">NH3</a></th>
+     <th scope="col" width="130px"><a href="pic/list/PM25.png" target="_blank" style="color: yellow; text-decoration: none;">PM2.5</a></th>
+     <th scope="col" width="130px"><a href="pic/list/PM10.png" target="_blank" style="color: yellow; text-decoration: none;">PM10</a></th>
+     <th scope="col" width="130px"><a href="#" style="color: yellow; text-decoration: none;">BC</a></th>
+     <th scope="col" width="130px"><a href="#" style="color: yellow; text-decoration: none;">OC</a></th>
+    </tr>
+   </thead>
+   <tbody align="center" style="color: #434343;">
+    <tr bgcolor="#bcbcbc">
+     <td height="5px"></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="45px">农业</td>
+     <td id="11">0</td>
+     <td id="12">0</td>
+     <td id="13">0</td>
+     <td id="14">492863.2</td>
+     <td id="15">0</td>
+     <td id="16">0</td>
+     <td id="17">0</td>
+     <td id="18">0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="45px">工业</td>
+     <td id="21">645339.8</td>
+     <td id="22">897721.3</td>
+     <td id="23">959888.7</td>
+     <td id="24">14377.6</td>
+     <td id="25">297794.1</td>
+     <td id="26">447250.8</td>
+     <td id="27">29267.0</td>
+     <td id="28">23793.0</td>    
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="45px">火力发电</td>
+     <td id="31">65041.1</td>
+     <td id="32">220084.8</td>
+     <td id="33">3492.1</td>
+     <td id="34">0</td>
+     <td id="35">29143.2</td>
+     <td id="36">45777.7</td>
+     <td id="37">58.3</td>
+     <td id="38">0</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="45px">移动源</td>
+     <td id="41">22863.6</td>
+     <td id="42">567570.0</td>
+     <td id="43">313070.6</td>
+     <td id="44">2820.0</td>
+     <td id="45">37214.2</td>
+     <td id="46">38242.0</td>
+     <td id="47">20949.2</td>
+     <td id="48">7336.3</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="45px">民用和生物质</td>
+     <td id="51">159538.3</td>
+     <td id="52">56462.6</td>
+     <td id="53">320112.6</td>
+     <td id="54">15586.3</td>
+     <td id="55">206702.0</td>
+     <td id="56">238724.2</td>
+     <td id="57">47711.7</td>
+     <td id="58">111258.6</td>
+    </tr>
+    <tr bgcolor="#f7f7f7">
+     <td height="45px">扬尘</td>
+     <td id="61">0</td>
+     <td id="62">0</td>
+     <td id="63">0</td>
+     <td id="64">0</td>
+     <td id="65">302382.3</td>
+     <td id="66">529486.6</td>
+     <td id="67">0</td>
+     <td id="68">0</td>
+    </tr>
+    <tr bgcolor="#ffffff">
+     <td height="45px" style="color: red; font-weight: bold;">合计</td>
+     <td id="71" style="color: red; font-weight: bold;">892782.8</td>
+     <td id="72" style="color: red; font-weight: bold;">1741838.7</td>
+     <td id="73" style="color: red; font-weight: bold;">1596564.0</td>
+     <td id="74" style="color: red; font-weight: bold;">525647.0</td>
+     <td id="75" style="color: red; font-weight: bold;">873235.9</td>
+     <td id="76" style="color: red; font-weight: bold;">1299481.4</td>
+     <td id="77" style="color: red; font-weight: bold;">97986.2</td>
+     <td id="78" style="color: red; font-weight: bold;">142387.9</td>
+    </tr>
+    <tr bgcolor="#0091d7">
+     <td height="5px"></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="footer1">
+  <div class="footer1_left">
+   <hr style="margin-left: 80px; margin-top: 50px;"/>
+  </div>
+  <div class="footer1_mid">
+   <h4 style="margin-top: 40px;">CONNECT</h4>
+  </div>
+  <div class="footer1_right">
+   <hr style="margin-right: 80px; margin-top: 50px;"/>
+  </div>
+  <div class="footer1_main">
+   <a href="http://www.iap.ac.cn" target="_blank" style="text-decoration: none;">
+    <img src="pic/IAP.png" width="42" height="42" style="margin-top: 25px;">
+   </a>
+   <a href="http://www.nodecome.com" target="_blank" style="text-decoration: none;">
+    <img src="pic/node.png" width="42" height="42" style="margin-top: 25px; margin-left: 95px;">
+   </a>
+  </div>
+ </div>
+ <div class="footer2">
+  <span>
+   Supports : Institute of Atmospheric Physics, Chinese Academy of Sciences
+  </span>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright : Node</span>
+ </div>
+ </center>
+</body>
+
+<script type="text/javascript">
+ function changelist(){
+      var region = document.getElementById('region');
+      if (region.value == "beijing")
+         {
+          document.getElementById('14').innerHTML="28069.6";
+          document.getElementById('21').innerHTML="87224.4";
+          document.getElementById('22').innerHTML="248285.4";
+          document.getElementById('23').innerHTML="282257.8";
+          document.getElementById('24').innerHTML="2948.8";
+          document.getElementById('25').innerHTML="49057.1";
+          document.getElementById('26').innerHTML="70531.1";
+          document.getElementById('27').innerHTML="2189.9";
+          document.getElementById('28').innerHTML="1946.3";
+          document.getElementById('31').innerHTML="6789.0";
+          document.getElementById('32').innerHTML="30793.8";
+          document.getElementById('33').innerHTML="760.8";
+          document.getElementById('35').innerHTML="1956.2";
+          document.getElementById('36').innerHTML="2878.0";
+          document.getElementById('37').innerHTML="3.9";
+          document.getElementById('38').innerHTML="0";
+          document.getElementById('41').innerHTML="6109.6";
+          document.getElementById('42').innerHTML="104654.7";
+          document.getElementById('43').innerHTML="124014.9";
+          document.getElementById('44').innerHTML="1159.8";
+          document.getElementById('45').innerHTML="7876.7";
+          document.getElementById('46').innerHTML="8004.8";
+          document.getElementById('47').innerHTML="4464.7";
+          document.getElementById('48').innerHTML="1536.9";
+          document.getElementById('51').innerHTML="39420.4";
+          document.getElementById('52').innerHTML="16916.7";
+          document.getElementById('53').innerHTML="52242.1";
+          document.getElementById('54').innerHTML="1276.7";
+          document.getElementById('55').innerHTML="39125.9";
+          document.getElementById('56').innerHTML="47866.0";
+          document.getElementById('57').innerHTML="7606.1";
+          document.getElementById('58').innerHTML="18851.1";
+          document.getElementById('65').innerHTML="12382.3";
+          document.getElementById('66').innerHTML="29486.6";
+          document.getElementById('71').innerHTML="139543.5";
+          document.getElementById('72').innerHTML="400650.6";
+          document.getElementById('73').innerHTML="459275.7";
+          document.getElementById('74').innerHTML="33454.9";
+          document.getElementById('75').innerHTML="110398.2";
+          document.getElementById('76').innerHTML="158766.5";
+          document.getElementById('77').innerHTML="14264.6";
+          document.getElementById('78').innerHTML="22334.3";
+         }
+      if (region.value == "hebei")
+         {
+          document.getElementById('14').innerHTML="492863.2";
+          document.getElementById('21').innerHTML="645339.8";
+          document.getElementById('22').innerHTML="897721.3";
+          document.getElementById('23').innerHTML="959888.7";
+          document.getElementById('24').innerHTML="14377.6";
+          document.getElementById('25').innerHTML="297794.1";
+          document.getElementById('26').innerHTML="447250.8";
+          document.getElementById('27').innerHTML="29267.0";
+          document.getElementById('28').innerHTML="23793.0";
+          document.getElementById('31').innerHTML="65041.1";
+          document.getElementById('32').innerHTML="220084.8";
+          document.getElementById('33').innerHTML="3492.1";
+          document.getElementById('35').innerHTML="29143.2";
+          document.getElementById('36').innerHTML="45777.7";
+          document.getElementById('37').innerHTML="58.3";
+          document.getElementById('38').innerHTML="0";
+          document.getElementById('41').innerHTML="22863.6";
+          document.getElementById('42').innerHTML="567570.0";
+          document.getElementById('43').innerHTML="313070.6";
+          document.getElementById('44').innerHTML="2820.0";
+          document.getElementById('45').innerHTML="37214.2";
+          document.getElementById('46').innerHTML="38242.0";
+          document.getElementById('47').innerHTML="20949.2";
+          document.getElementById('48').innerHTML="7336.3";
+          document.getElementById('51').innerHTML="159538.3";
+          document.getElementById('52').innerHTML="56462.6";
+          document.getElementById('53').innerHTML="320112.6";
+          document.getElementById('54').innerHTML="15586.3";
+          document.getElementById('55').innerHTML="206702.0";
+          document.getElementById('56').innerHTML="238724.2";
+          document.getElementById('57').innerHTML="47711.7";
+          document.getElementById('58').innerHTML="111258.6";
+          document.getElementById('65').innerHTML="302382.3";
+          document.getElementById('66').innerHTML="529486.6";
+          document.getElementById('71').innerHTML="892782.8";
+          document.getElementById('72').innerHTML="1741838.7";
+          document.getElementById('73').innerHTML="1596564.0";
+          document.getElementById('74').innerHTML="525647.0";
+          document.getElementById('75').innerHTML="873235.9";
+          document.getElementById('76').innerHTML="1299481.4";
+          document.getElementById('77').innerHTML="97986.2";
+          document.getElementById('78').innerHTML="142387.9";
+         }
+      if (region.value == "tianjin")
+         {
+          document.getElementById('14').innerHTML="37355.6";
+          document.getElementById('21').innerHTML="274118.2";
+          document.getElementById('22').innerHTML="276358.7";
+          document.getElementById('23').innerHTML="353677.7";
+          document.getElementById('24').innerHTML="1767.5";
+          document.getElementById('25').innerHTML="65958.8";
+          document.getElementById('26').innerHTML="98570.0";
+          document.getElementById('27').innerHTML="4262.3";
+          document.getElementById('28').innerHTML="4066.7";
+          document.getElementById('31').innerHTML="35891.6";
+          document.getElementById('32').innerHTML="114100.0";
+          document.getElementById('33').innerHTML="740.2";
+          document.getElementById('35').innerHTML="5917.2";
+          document.getElementById('36').innerHTML="8546.0";
+          document.getElementById('37').innerHTML="11.8";
+          document.getElementById('38').innerHTML="0";
+          document.getElementById('41').innerHTML="3720.9";
+          document.getElementById('42').innerHTML="90639.1";
+          document.getElementById('43').innerHTML="99562.9";
+          document.getElementById('44').innerHTML="611.5";
+          document.getElementById('45').innerHTML="4510.8";
+          document.getElementById('46').innerHTML="4607.1";
+          document.getElementById('47').innerHTML="2588.3";
+          document.getElementById('48').innerHTML="914.7";
+          document.getElementById('51').innerHTML="16274.1";
+          document.getElementById('52').innerHTML="6676.9";
+          document.getElementById('53').innerHTML="52343.9";
+          document.getElementById('54').innerHTML="1261.6";
+          document.getElementById('55').innerHTML="26010.5";
+          document.getElementById('56').innerHTML="29618.4";
+          document.getElementById('57').innerHTML="5797.8";
+          document.getElementById('58').innerHTML="13655.8";
+          document.getElementById('65').innerHTML="12382.3";
+          document.getElementById('66').innerHTML="29486.6";
+          document.getElementById('71').innerHTML="330004.9";
+          document.getElementById('72').innerHTML="487774.7";
+          document.getElementById('73').innerHTML="506324.7";
+          document.getElementById('74').innerHTML="40996.3";
+          document.getElementById('75').innerHTML="114779.6";
+          document.getElementById('76').innerHTML="170828.2";
+          document.getElementById('77').innerHTML="12660.2";
+          document.getElementById('78').innerHTML="18637.1";
+         }
+ }
+</script>
+      
+</html>

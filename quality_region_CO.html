@@ -144,19 +144,20 @@ a#bq_c:hover,a#bq_c:active
 {
  width: 250px;
  height: 500px;
- background-color: green;
+ background-color: #e4e4e4;
  float: left;
 }
 
 .main_left_nav1
 {
- width: 150px;
+ width: 250px;
  height: 35px;
  line-height: 33px;
- background-color: green;
+ background-color: #666666;
  float: left;
 }
 
+<!--
 .main_left_nav2
 {
  width: 100px;
@@ -165,12 +166,12 @@ a#bq_c:hover,a#bq_c:active
  background-color: #e4e4e4;
  float: left;
 }
+-->
 
 .main_left_nav3
 {
  width: 250px;
  height: 220px;
- background-color: green;
  float: left;
 }
 
@@ -178,7 +179,6 @@ a#bq_c:hover,a#bq_c:active
 {
  width: 250px;
  height: 245px;
- background-color: green;
  float: left;
 }
 
@@ -250,7 +250,7 @@ a#bq_c:hover,a#bq_c:active
  <center>
  <div class="bar1"><img src="pic/biao2.png" width="1200px" height="75px" /></div>
  <div class="biaoti">
- <h1 style="margin:0 auto 0 auto">AIR-EMISSION-COST Analysis System</h1>
+ <h1 style="margin:0 auto 0 auto">空气质量-减排量-成本 协同优化平台</h1>
  </div>
  <div class="bar2"><img src="pic/biao1.png" width="1200px" height="80px" /></div>
 
@@ -261,10 +261,10 @@ a#bq_c:hover,a#bq_c:active
  <div class="nav">
   <hr style="height: 0px; width: 1200px; border: none; border-top: 7px ridge #666666; margin: 0px 0px 2px 0px;" />
   <div class="biaoqian_A">
-  <a href="quality.html" style="display: block; background-color: #003a68; text-decoration: none; color: #FFFFFF; font-weight: bold; text-transform: uppercase;">quality</a>
+  <a href="quality.html" style="display: block; background-color: #003a68; text-decoration: none; color: #FFFFFF; font-weight: bold; text-transform: uppercase;">空气质量</a>
   </div>
   <div class="biaoqian_B">
-  <a href="emission_scheme.html" style="display: block; background-color: #e4e4e4; text-decoration: none; color: #003a68; font-weight: bold; text-transform: uppercase;">emission</a>
+  <a href="emission_scheme.html" style="display: block; background-color: #e4e4e4; text-decoration: none; color: #003a68; font-weight: bold; text-transform: uppercase;">排放源</a>
   </div>
   <div id="triangle1"></div>
   <div class="sj">
@@ -307,35 +307,38 @@ a#bq_c:hover,a#bq_c:active
  <div class="main">
   <div class="main_left">
    <div class="main_left_nav1">
-    <a href="#" style="display: block; background-color: green; text-decoration: none; color: #FFFFFF; font-weight: bold; text-transform: uppercase;">region</a>
+    <a href="#" style="display: block; background-color: #666666; text-decoration: none; color: #FFFFFF; font-weight: bold; text-transform: uppercase;">区域分布</a>
    </div>
+<!--
    <div class="main_left_nav2">
     <a href="quality_station.html" style="display: block; background-color: #f9fafb; text-decoration: none; color: grey; font-weight: bold; text-transform: lowercase;">station</a>
    </div>
+-->
    <div class="main_left_nav3">
-    </br>
-    <span style="color: #FF9933; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">Daily/Monthly : </span>
+<!--
+    <span style="color: #666666; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">计算周期 : </span>
     <select id="cycle" style="padding: 2px; text-align: center;" onChange="changeimage();">
-     <option value="DAY">Daily</option>
-     <option value="MONTH" selected="">Monthly</option>
+     <option value="DAY">日均</option>
+     <option value="MONTH" selected="">月均</option>
     </select>
     </br>
     </br>
-    <span style="color: #FF9933; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">Domain : </span>
+    <span style="color: #666666; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">分辨率 : </span>
     <select style="padding: 2px; text-align: center;">
      <option selected="">D1</option>
      <option>D2</option>
     </select>
+-->
     </br>
     </br>
-    <span style="color: #FF9933; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">Forecast initial time : </span>
+    <span style="color: #666666; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">模拟起始时间 : </span>
     </br>
     </br>
     <select style="padding: 2px; text-align: center;">
      <option selected="">2016</option>
      <option>2017</option>
     </select>
-    <span style="color: #FF9933; font-weight: bold; margin-left: 4px; line-height: 23px;">-&nbsp</span>
+    <span style="color: #666666; font-weight: bold; margin-left: 4px; line-height: 23px;">-&nbsp</span>
     <select id="date" style="padding: 2px; text-align: center;" onChange="changeimage();">
      <option value="1" selected="">1</option>
      <option value="2">2</option>
@@ -350,9 +353,10 @@ a#bq_c:hover,a#bq_c:active
      <option value="11">11</option>
      <option value="12">12</option>
     </select>
-    <span style="color: #FF9933; font-weight: bold; margin-left: 4px; line-height: 23px;">-&nbsp</span>
+    <span style="color: #666666; font-weight: bold; margin-left: 4px; line-height: 23px;">-&nbsp</span>
     <select style="padding: 2px; text-align: center;">
-     <option value="1" selected="">1</option>
+     <option value="-" selected="">-</option>
+     <option value="1">1</option>
      <option value="25">2</option>
      <option value="49">3</option>
      <option value="73">4</option>
@@ -386,7 +390,7 @@ a#bq_c:hover,a#bq_c:active
     </select>
     </br>
     </br>
-    <span style="color: #FF9933; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">Emission source : </span>
+    <span style="color: #666666; font-weight: bold; margin-left: 15px; line-height: 23px; float: left;">排放标准 : </span>
     <select id="source" style="padding: 2px; text-align: center;" onChange="changeimage();">
      <option value="original" selected="">原始</option>
      <option value="02">民用源标准</option>
@@ -398,7 +402,8 @@ a#bq_c:hover,a#bq_c:active
     </br>
    </div>
    <div class="main_left_nav4">
-    <a id="fangan" href="" target="_blank" style="text-decoration: none; color: red; display: block; background-color: yellow; font-weight: bold;">方案比较</a>
+    </br>
+    <a id="fangan" href="" target="_blank" style="text-decoration: none; color: yellow; display: block; background-color: #800080; font-weight: bold;">方案比较</a>
    </div>
   </div>
   <div class="main_right_1">
@@ -430,9 +435,9 @@ a#bq_c:hover,a#bq_c:active
  </div>
  <div class="footer2">
   <span>
-   Supports : Institute of Atmospheric Physics, Chinese Academy of Sciences
+   版权：中国科学院大气物理研究所
   </span>
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright : Node</span>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技术支持 : 中科新雨</span>
  </div>
  </center>
 </body>

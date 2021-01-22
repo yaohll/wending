@@ -447,20 +447,8 @@ a#bq_c:hover,a#bq_c:active
       var cycle = document.getElementById('cycle');
       var date = document.getElementById('date');
       var source = document.getElementById('source');
-      if (source.value == "original"){
-         if (cycle.value == "MONTH")
-            {
-             var path = "pic/orig_conc/month/CO/CO_" + date.value + ".png";
-             document.getElementById('image').src = path;
-            }
-      }
-      else{
-         if (cycle.value == "MONTH")
-            {
              var path = "pic/redu_conc/month/" + source.value + "/CO/CO_" + date.value + ".png";
              document.getElementById('image').src = path;
-            }
-      }
  }
 
 

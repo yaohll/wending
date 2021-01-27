@@ -289,14 +289,14 @@ a#bq_lis:hover
    <thead>
     <tr bgcolor="#0091d7">
      <th scope="col" height="30px" width="160px"></th>
-     <th scope="col" width="130px"><a href="pic/list/SO2.png" target="_blank" style="color: yellow; text-decoration: none;">SO2</a></th>
-     <th scope="col" width="130px"><a href="pic/list/NOx.png" target="_blank" style="color: yellow; text-decoration: none;">NOx</a></th>
-     <th scope="col" width="130px"><a href="#" style="color: yellow; text-decoration: none;">VOC</a></th>
-     <th scope="col" width="130px"><a href="pic/list/NH3.png" target="_blank"  style="color: yellow; text-decoration: none;">NH3</a></th>
-     <th scope="col" width="130px"><a href="pic/list/PM25.png" target="_blank" style="color: yellow; text-decoration: none;">PM2.5</a></th>
-     <th scope="col" width="130px"><a href="pic/list/PM10.png" target="_blank" style="color: yellow; text-decoration: none;">PM10</a></th>
-     <th scope="col" width="130px"><a href="#" style="color: yellow; text-decoration: none;">BC</a></th>
-     <th scope="col" width="130px"><a href="#" style="color: yellow; text-decoration: none;">OC</a></th>
+     <th scope="col" width="130px"><a id="list_so2" href="pic/list/hebei/SO2.png" target="_blank" style="color: yellow; text-decoration: none;">SO2</a></th>
+     <th scope="col" width="130px"><a id="list_nox" href="pic/list/hebei/NOx.png" target="_blank" style="color: yellow; text-decoration: none;">NOx</a></th>
+     <th scope="col" width="130px"><a id="list_voc" href="pic/list/hebei/VOCs.png" target="_blank" style="color: yellow; text-decoration: none;">VOC</a></th>
+     <th scope="col" width="130px"><a id="list_nh3" href="pic/list/hebei/NH3.png" target="_blank"  style="color: yellow; text-decoration: none;">NH3</a></th>
+     <th scope="col" width="130px"><a id="list_pm25" href="pic/list/hebei/PM25.png" target="_blank" style="color: yellow; text-decoration: none;">PM2.5</a></th>
+     <th scope="col" width="130px"><a id="list_pm10" href="pic/list/hebei/PM10.png" target="_blank" style="color: yellow; text-decoration: none;">PM10</a></th>
+     <th scope="col" width="130px"><a id="list_bc" href="pic/list/hebei/BC.png" target="_blank" style="color: yellow; text-decoration: none;">BC</a></th>
+     <th scope="col" width="130px"><a id="list_oc" href="pic/list/hebei/OC.png" target="_blank" style="color: yellow; text-decoration: none;">OC</a></th>
     </tr>
    </thead>
    <tbody align="center" style="color: #434343;">
@@ -478,6 +478,14 @@ a#bq_lis:hover
           document.getElementById('76').innerHTML="158766.5";
           document.getElementById('77').innerHTML="14264.6";
           document.getElementById('78').innerHTML="22334.3";
+          document.getElementById('list_so2').href = "pic/list/beijing/SO2.png";
+          document.getElementById('list_nox').href = "pic/list/beijing/NOx.png";
+          document.getElementById('list_voc').href = "pic/list/beijing/VOCs.png";
+          document.getElementById('list_nh3').href = "pic/list/beijing/NH3.png";
+          document.getElementById('list_pm25').href = "pic/list/beijing/PM25.png";
+          document.getElementById('list_pm10').href = "pic/list/beijing/PM10.png";
+          document.getElementById('list_bc').href = "pic/list/beijing/BC.png";
+          document.getElementById('list_oc').href = "pic/list/beijing/OC.png";
          }
       if (region.value == "hebei")
          {
@@ -523,6 +531,14 @@ a#bq_lis:hover
           document.getElementById('76').innerHTML="1299481.4";
           document.getElementById('77').innerHTML="97986.2";
           document.getElementById('78').innerHTML="142387.9";
+          document.getElementById('list_so2').href = "pic/list/hebei/SO2.png";
+          document.getElementById('list_nox').href = "pic/list/hebei/NOx.png";
+          document.getElementById('list_voc').href = "pic/list/hebei/VOCs.png";
+          document.getElementById('list_nh3').href = "pic/list/hebei/NH3.png";
+          document.getElementById('list_pm25').href = "pic/list/hebei/PM25.png";
+          document.getElementById('list_pm10').href = "pic/list/hebei/PM10.png";
+          document.getElementById('list_bc').href = "pic/list/hebei/BC.png";
+          document.getElementById('list_oc').href = "pic/list/hebei/OC.png";
          }
       if (region.value == "tianjin")
          {
@@ -558,16 +574,24 @@ a#bq_lis:hover
           document.getElementById('56').innerHTML="29618.4";
           document.getElementById('57').innerHTML="5797.8";
           document.getElementById('58').innerHTML="13655.8";
-          document.getElementById('65').innerHTML="12382.3";
-          document.getElementById('66').innerHTML="29486.6";
+          document.getElementById('65').innerHTML="14328.3";
+          document.getElementById('66').innerHTML="31824.1";
           document.getElementById('71').innerHTML="330004.9";
           document.getElementById('72').innerHTML="487774.7";
           document.getElementById('73').innerHTML="506324.7";
           document.getElementById('74').innerHTML="40996.3";
-          document.getElementById('75').innerHTML="114779.6";
-          document.getElementById('76').innerHTML="170828.2";
+          document.getElementById('75').innerHTML="116725.6";
+          document.getElementById('76').innerHTML="173165.6";
           document.getElementById('77').innerHTML="12660.2";
           document.getElementById('78').innerHTML="18637.1";
+          document.getElementById('list_so2').href = "pic/list/tianjin/SO2.png";
+          document.getElementById('list_nox').href = "pic/list/tianjin/NOx.png";
+          document.getElementById('list_voc').href = "pic/list/tianjin/VOCs.png";
+          document.getElementById('list_nh3').href = "pic/list/tianjin/NH3.png";
+          document.getElementById('list_pm25').href = "pic/list/tianjin/PM25.png";
+          document.getElementById('list_pm10').href = "pic/list/tianjin/PM10.png";
+          document.getElementById('list_bc').href = "pic/list/tianjin/BC.png";
+          document.getElementById('list_oc').href = "pic/list/tianjin/OC.png";
          }
  }
 </script>
